@@ -119,37 +119,6 @@ export function Timer() {
 }
 ```
 
----
-
-## 🎨 Estilização com StyleSheet
-
-No React Native, a estilização é feita usando `StyleSheet.create`. Isso ajuda a organizar os estilos e melhora o desempenho.
-
-```javascript
-import { StyleSheet, View, Text } from 'react-native';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-  },
-  text: {
-    fontSize: 20,
-    color: '#333',
-  },
-});
-
-export function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Olá, Mundo!</Text>
-    </View>
-  );
-}
-```
-
 ### 🔍 Explicação:
 - **StyleSheet.create**: Cria um objeto de estilos que pode ser reutilizado.
 - **flex: 1**: Faz com que o container ocupe todo o espaço disponível.
