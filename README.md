@@ -1,2 +1,173 @@
 # ReactNative-Javascript-Basic
-Anotações da aula: MobileApplicationDevelopment, FIAP
+
+# Aula de React Native - Anotações 📚
+
+Este repositório contém anotações e exemplos básicos sobre React Native, abordando desde a criação de um projeto até o uso de componentes, props, estados e estilos. Essas anotações foram feitas durante as aulas da faculdade e são úteis para quem está começando com React Native.
+
+---
+
+## 🚀 Como Criar um Projeto React Native
+
+Para iniciar um projeto React Native, siga os passos abaixo:
+
+### 1. Criar um novo projeto
+
+```bash
+npx create-expo-app -t
+```
+Esse comando cria um novo projeto React Native com uma estrutura básica.
+
+### 2. Acessar a pasta do projeto
+
+```bash
+cd {nome_do_projeto}
+```
+Substitua `{nome_do_projeto}` pelo nome do seu projeto. Isso navega até a pasta do projeto.
+
+### 3. Abrir o projeto no VSCode
+
+```bash
+code .
+```
+Esse comando abre a pasta do projeto diretamente no Visual Studio Code.
+
+### 4. Iniciar o servidor de desenvolvimento
+
+```bash
+npm start
+```
+Isso inicia o servidor de desenvolvimento do React Native, permitindo que você visualize o app no seu emulador ou dispositivo físico.
+
+---
+
+## 🛠️ Opções Padrão ao Criar um Projeto
+
+Ao criar um projeto React Native, você pode escolher entre diferentes templates. O mais comum é o `blank`, que cria um projeto em branco:
+
+- **blank**: Cria um projeto React Native básico e vazio, ideal para começar do zero.
+
+---
+
+## 🧩 Estrutura Básica de um Componente
+
+No React Native, tudo é construído em torno de componentes. Abaixo está um exemplo básico de um componente funcional:
+
+```javascript
+import React from 'react';
+import { View, Text } from 'react-native';
+
+export function Clock(props) {
+  return (
+    <View>
+      <Text>{props.time}</Text>
+    </View>
+  );
+}
+```
+
+### 🔍 Explicação:
+- **props**: São propriedades passadas para o componente. No exemplo acima, `props.time` é uma propriedade que exibe o tempo.
+- **View**: É um container que agrupa elementos. Sempre use uma `View` para envolver outros componentes.
+- **Text**: Exibe texto na tela.
+
+---
+
+## 🎣 Hooks: useState e useEffect
+
+Hooks são funções que permitem usar estado e outros recursos do React em componentes funcionais. Os mais comuns são `useState` e `useEffect`.
+
+### 🏗️ useState
+O `useState` permite adicionar estado ao seu componente. Exemplo:
+
+```javascript
+import React, { useState } from 'react';
+import { View, Text, Button } from 'react-native';
+
+export function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <View>
+      <Text>Contador: {count}</Text>
+      <Button title="Incrementar" onPress={() => setCount(count + 1)} />
+    </View>
+  );
+}
+```
+
+### ⏳ useEffect
+O `useEffect` executa efeitos colaterais, como chamadas de API ou atualizações do DOM. Ele recebe um array de dependências que determina quando o efeito deve ser executado.
+
+```javascript
+import React, { useState, useEffect } from 'react';
+import { View, Text } from 'react-native';
+
+export function Timer() {
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(time + 1);
+    }, 1000);
+
+    return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+  }, [time]);
+
+  return (
+    <View>
+      <Text>Tempo: {time} segundos</Text>
+    </View>
+  );
+}
+```
+
+---
+
+## 🎨 Estilização com StyleSheet
+
+No React Native, a estilização é feita usando `StyleSheet.create`. Isso ajuda a organizar os estilos e melhora o desempenho.
+
+```javascript
+import { StyleSheet, View, Text } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f5f5f5',
+  },
+  text: {
+    fontSize: 20,
+    color: '#333',
+  },
+});
+
+export function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>Olá, Mundo!</Text>
+    </View>
+  );
+}
+```
+
+### 🔍 Explicação:
+- **StyleSheet.create**: Cria um objeto de estilos que pode ser reutilizado.
+- **flex: 1**: Faz com que o container ocupe todo o espaço disponível.
+- **justifyContent** e **alignItems**: Alinham os itens vertical e horizontalmente.
+
+---
+
+## 📌 Dicas Importantes
+
+- **Sempre use View para pequenos projetos**: Para projetos simples, uma `View` é suficiente para agrupar componentes.
+- **Use ListView ou FlatList para projetos grandes**: Quando há muitos itens para renderizar, como listas, prefira `FlatList` para melhor desempenho.
+
+---
+
+## 📚 Recursos Adicionais
+
+- [Documentação Oficial do React Native](https://reactnative.dev/docs/getting-started)
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Hooks Guide](https://reactjs.org/docs/hooks-intro.html)
