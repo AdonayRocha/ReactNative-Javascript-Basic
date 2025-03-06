@@ -1,6 +1,4 @@
-# ReactNative-Javascript-Basic
-
-# Aula de React Native - Anotações 📚
+# ReactNative-Javascript-Basic - Anotações 📚
 
 Este repositório contém anotações e exemplos básicos sobre React Native, abordando desde a criação de um projeto até o uso de componentes, props, estados e estilos. Essas anotações foram feitas durante as aulas da faculdade e são úteis para quem está começando com React Native.
 
