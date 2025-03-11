@@ -38,8 +38,8 @@ Isso inicia o servidor de desenvolvimento do React Native, permitindo que você 
 
 ---
 
-## ReactNative
-### Estrutura Básica de um Componente 🧩 
+## ReactNative 🧩 
+### Estrutura Básica de um Componente 
 
 No React Native, tudo é construído em torno de componentes, assim como no React.js. Abaixo está um exemplo básico de um componente funcional:
 
@@ -58,11 +58,11 @@ export function Clock(props) {
 
 ---
 
-## Hooks: useState e useEffect
+## Hooks: useState e useEffect 🏗️
 
 Hooks são funções que permitem usar estado e outros recursos do React em componentes funcionais. Os mais comuns são `useState` e `useEffect`.
 
-### 🏗️ useState
+### useState
 O `useState` permite adicionar estado ao seu componente. Exemplo:
 
 ```javascript
@@ -107,7 +107,7 @@ export function Timer() {
 }
 ```
 
-## 🔍 Explicação:
+## Explicação 🔍
 - **StyleSheet.create**: Cria um objeto de estilos que pode ser reutilizado.
 - **flex: 1**: Faz com que o container ocupe todo o espaço disponível.
 - **justifyContent** e **alignItems**: Alinham os itens vertical e horizontalmente.
@@ -124,7 +124,7 @@ export function Timer() {
 
 ---
 
-## 📚 Recursos Adicionais
+## Recursos Adicionais 📚
 
 - [Documentação Oficial do React Native](https://reactnative.dev/docs/getting-started)
 - [Expo Documentation](https://docs.expo.dev/)
