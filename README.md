@@ -4,7 +4,7 @@ Este repositório contém anotações e exemplos básicos sobre React Native, ab
 
 ---
 
-## 🚀 Como Criar um Projeto React Native
+## Criando um projeto React Native Default [Blank]
 
 Para iniciar um projeto React Native, siga os passos abaixo:
 
@@ -13,7 +13,7 @@ Para iniciar um projeto React Native, siga os passos abaixo:
 ```bash
 npx create-expo-app -t
 ```
-Esse comando cria um novo projeto React Native com uma estrutura básica.
+Esse comando cria um novo projeto React Native com uma estrutura básica e utiliza o "-t" para encontrar a ultima versão.
 
 ### 2. Acessar a pasta do projeto
 
@@ -34,21 +34,14 @@ Esse comando abre a pasta do projeto diretamente no Visual Studio Code.
 ```bash
 npm start
 ```
-Isso inicia o servidor de desenvolvimento do React Native, permitindo que você visualize o app no seu emulador ou dispositivo físico.
+Isso inicia o servidor de desenvolvimento do React Native, permitindo que você visualize o app no seu emulador [Geralmente Android Studio] ou dispositivo físico.
 
 ---
 
-## 🛠️ Opções Padrão ao Criar um Projeto
+## ReactNative
+### Estrutura Básica de um Componente 🧩 
 
-Ao criar um projeto React Native, você pode escolher entre diferentes templates. O mais comum é o `blank`, que cria um projeto em branco:
-
-- **blank**: Cria um projeto React Native básico e vazio, ideal para começar do zero.
-
----
-
-## 🧩 Estrutura Básica de um Componente
-
-No React Native, tudo é construído em torno de componentes. Abaixo está um exemplo básico de um componente funcional:
+No React Native, tudo é construído em torno de componentes, assim como no React.js. Abaixo está um exemplo básico de um componente funcional:
 
 ```javascript
 import React from 'react';
@@ -63,14 +56,9 @@ export function Clock(props) {
 }
 ```
 
-### 🔍 Explicação:
-- **props**: São propriedades passadas para o componente. No exemplo acima, `props.time` é uma propriedade que exibe o tempo.
-- **View**: É um container que agrupa elementos. Sempre use uma `View` para envolver outros componentes.
-- **Text**: Exibe texto na tela.
-
 ---
 
-## 🎣 Hooks: useState e useEffect
+## Hooks: useState e useEffect
 
 Hooks são funções que permitem usar estado e outros recursos do React em componentes funcionais. Os mais comuns são `useState` e `useEffect`.
 
@@ -93,7 +81,7 @@ export function Counter() {
 }
 ```
 
-### ⏳ useEffect
+### useEffect
 O `useEffect` executa efeitos colaterais, como chamadas de API ou atualizações do DOM. Ele recebe um array de dependências que determina quando o efeito deve ser executado.
 
 ```javascript
@@ -119,14 +107,17 @@ export function Timer() {
 }
 ```
 
-### 🔍 Explicação:
+## 🔍 Explicação:
 - **StyleSheet.create**: Cria um objeto de estilos que pode ser reutilizado.
 - **flex: 1**: Faz com que o container ocupe todo o espaço disponível.
 - **justifyContent** e **alignItems**: Alinham os itens vertical e horizontalmente.
+- **props**: São propriedades passadas para o componente. No exemplo acima, `props.time` é uma propriedade que exibe o tempo.
+- **View**: É um container que agrupa elementos. Sempre use uma `View` para envolver outros componentes. Também é um identificador do reactNative.
+- **Text**: Função texto na tela.
 
 ---
 
-## 📌 Dicas Importantes
+## Dicas Importantes 📌
 
 - **Sempre use View para pequenos projetos**: Para projetos simples, uma `View` é suficiente para agrupar componentes.
 - **Use ListView ou FlatList para projetos grandes**: Quando há muitos itens para renderizar, como listas, prefira `FlatList` para melhor desempenho.
