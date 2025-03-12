@@ -11,7 +11,7 @@ Para iniciar um projeto React Native, siga os passos abaixo:
 ### 1. Criar um novo projeto
 
 ```bash
-npx create-expo-app -t
+npx create-expo-app@latest -t
 ```
 Esse comando cria um novo projeto React Native com uma estrutura básica e utiliza o "-t" para encontrar a ultima versão.
 
