@@ -63,7 +63,9 @@ export function Clock(props) {
 Hooks são funções que permitem usar estado e outros recursos do React em componentes funcionais. Os mais comuns são `useState` e `useEffect`.
 
 ### useState
-O `useState` permite adicionar estado ao seu componente. Exemplo:
+O `useState` permite adicionar estado ao seu componente. 
+O primeiro item do array `count` é referente ao estado. Enquanto `setCount` é uma convenção de nomenclatura. 
+Exemplo:
 
 ```javascript
 import React, { useState } from 'react';
