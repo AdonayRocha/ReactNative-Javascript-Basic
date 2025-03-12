@@ -85,6 +85,7 @@ export function Counter() {
 
 ### useEffect
 O `useEffect` executa efeitos colaterais, como chamadas de API ou atualizações do DOM. Ele recebe um array de dependências que determina quando o efeito deve ser executado.
+O `useEffect` será executado sempre após renderizar toda a aplicação.
 
 ```javascript
 import React, { useState, useEffect } from 'react';
